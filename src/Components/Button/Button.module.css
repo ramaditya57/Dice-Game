@@ -1,0 +1,42 @@
+.property{
+    padding: 10px 16px;
+    gap: 10px;
+    min-width: 220px;
+    height: 44px;
+    border: none;
+    background-color: black;
+    border-radius: 5px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s background ease-in;
+}
+
+.property:hover{
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    transition: 0.3s background ease-in;
+}
+
+.pro{
+    padding: 10px 16px;
+    gap: 10px;
+    min-width: 220px;
+    height: 44px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    transition: 0.4s background ease-in;
+    border: 2px solid black;
+}
+
+.pro:hover{
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    transition: 0.3s background ease-in;
+}
