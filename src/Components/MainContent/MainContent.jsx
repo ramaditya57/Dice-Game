@@ -15,7 +15,7 @@ const MainContent = ({reset, currDice, rollDice }) => {
       <DiceContainer>
         <div className="dice" onClick={rollDice}>
           <img
-            src={`/images/dice_${currDice}.png`}
+            src={`${process.env.PUBLIC_URL}/images/dice_${currDice}.png`}
             className="image_file"
             alt=""
           />
