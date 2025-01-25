@@ -2,8 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import Button from "../Button/Button";
 
-const MainContent = ({reset, currDice, rollDice }) => {
-
+const MainContent = ({ reset, currDice, rollDice }) => {
   const [state, setState] = useState(false);
 
   const func = () => {
@@ -15,9 +14,9 @@ const MainContent = ({reset, currDice, rollDice }) => {
       <DiceContainer>
         <div className="dice" onClick={rollDice}>
           <img
-            src={`${process.env.PUBLIC_URL}/images/dice_${currDice}.png`}
+            src={`${import.meta.env.BASE_URL}images/dice_${currDice}.png`}
             className="image_file"
-            alt=""
+            alt="dice"
           />
         </div>
         <p>Click on Dice to roll</p>
@@ -27,18 +26,20 @@ const MainContent = ({reset, currDice, rollDice }) => {
           <Button onClick={func} isColorProperty={true} text="Show Rules" />
         </div>
 
-        {state && <div className="rules">
-          <h1>How to play dice game</h1>
-          <div className="steps">
-            <p>Select any number</p>
-            <p>Click on dice image</p>
-            <p>
-              after click on dice if selected number is equal to dice number you
-              will get same point as dice{" "}
-            </p>
-            <p>if you get wrong guess then 2 point will be dedcuted </p>
+        {state && (
+          <div className="rules">
+            <h1>How to play dice game</h1>
+            <div className="steps">
+              <p>Select any number</p>
+              <p>Click on dice image</p>
+              <p>
+                after click on dice if selected number is equal to dice number
+                you will get same point as dice{" "}
+              </p>
+              <p>if you get wrong guess then 2 point will be dedcuted </p>
+            </div>
           </div>
-        </div>}
+        )}
       </DiceContainer>
     </div>
   );
@@ -72,9 +73,9 @@ const DiceContainer = styled.div`
     gap: 24px;
   }
 
-  .rules{
+  .rules {
     margin-top: 64px;
-    background-color: #FBF1F1;
+    background-color: #fbf1f1;
     max-width: 794px;
     max-height: 208px;
     padding: 15px 20px;
@@ -87,7 +88,7 @@ const DiceContainer = styled.div`
     margin-top: 0px;
   }
 
-  .steps p{
+  .steps p {
     font-size: 16px;
     margin: 0;
   }
